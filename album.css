@@ -1,0 +1,322 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
+/* -----------------------ОБНУЛЕНИЕ------------------------------- */
+
+html{
+  position: fixed;
+  user-select: none;
+  width: 100%;
+}
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    
+}
+._container{
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box;
+max-width: 1620px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.main{
+
+}
+
+.main-albumtitle{
+  font-family: "Vocal HairLine";
+    font-weight: 1000;
+    font-size: 48px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    cursor: crosshair;
+    user-select: none;
+    z-index: 60;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.fixed-title{
+    position: fixed;
+   width:100%;
+   
+top: 0;
+left: 0;
+z-index: 60;
+}
+.fixed-body{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    padding: 30px 10px;
+}
+.fixed-icons{
+    position: fixed;
+    height:100%;
+    
+ top: 0;
+ right: 5%;
+ z-index: 60;
+}
+.fixed-icons-body{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+.fixed-icon:last-child{
+padding-top: 20px;
+}
+.fixed-icon{
+    max-width: 40px;
+    cursor: pointer;
+}
+
+.popup{
+  position: fixed;
+ width:100%;
+ height: 100%;
+background: rgba(255, 255, 255, 0.8);
+top: 0;
+left: 0;
+z-index: 51;
+overflow-y: scroll;
+}
+.popup.passive{
+  display: none;
+}
+.popup.active{
+  display: block;
+}
+.popup-body{
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+.popup-content{
+  max-width: 600px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  padding-top: 180px;
+ 
+}
+.popup-title{
+  font-family: 'Comforter';
+    font-size: 32px;
+    cursor: crosshair;
+    user-select: none;
+}
+
+
+
+
+.main-texts-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12%;
+}
+.main-text-title{
+    font-family: 'Screwball', sans-serif;
+    font-size: 32px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.main-mediarow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.main-stream{
+    font-family: "Castellar";
+    font-weight: 1000;
+    font-size: 26px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.main-text{
+    font-family: 'Screwball', sans-serif;
+    font-size: 16px;
+    max-width: 500px;
+    text-align: center;
+    cursor: crosshair;
+    user-select: none;
+}
+.main-other{
+    font-family: "Castellar";
+    font-weight: 1000;
+    font-size: 26px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.fixed-media-row{
+
+align-items: center;
+display:none;
+}
+.fixed-media-listen{
+  font-family: "Castellar";
+  font-weight: 1000;
+  font-size: 18px;
+  cursor: pointer;
+}
+.fixed-media-more{
+  font-family: "Castellar";
+  font-weight: 1000;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+@media(max-width:844px){
+.main-texts-row{
+  padding-top: 30%;
+}
+.fixed-icons-body{
+  margin-top: 160px;
+}
+}
+@media(max-width:680px){
+  .main-albumtitle{
+    font-size: 32px;
+  }
+}
+@media(max-width:608px){
+  .fixed-icons-body{
+    margin-top: 160px;
+  }
+}
+
+@media(max-width:484px){
+  .albumTitlePassive{
+    display: none;
+  }
+  .fixed-icons-body{
+    margin-top: 100px;
+  }
+  .main-text-title{
+    font-size: 26px;
+  }
+  .main-albumtitle{
+    font-size: 62px;
+  }
+  .main-stream{
+    display: none;
+  }
+  .main-other{
+    display: none;
+  }
+  .fixed-media-listen{
+margin-right: 20px;
+  }
+  .fixed-media-more{
+    margin-left: 20px;
+  }
+  .fixed-media-row{
+    display: flex;
+  }
+  .main-mediarow{
+    padding-top: 40px;
+  }
+  .popup-content{
+padding-top: 100px;
+  }
+}
+@media(max-width:438px){
+  .main-texts-row{
+    padding-top: 100px;
+  }
+  .fixed-media-row{
+    margin-bottom: 40px;
+  }
+  .fixed-media-listen{
+    margin-right: 10px;
+      }
+      .fixed-media-more{
+        margin-left: 12px;
+      }
+}
